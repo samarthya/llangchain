@@ -11,8 +11,7 @@ The example uses the Gemma 3B model through Ollama and implements real-time
 streaming of the model's output using callback handlers.
 """
 
-from langchain_community.llms import Ollama
-from langchain.callbacks.manager import CallbackManager
+from langchain_ollama import OllamaLLM
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
 def main():
@@ -26,9 +25,9 @@ def main():
     4. Displays the response
     """
     # Initialize Ollama with the Gemma 3B model
-    llm = Ollama(
+    llm = OllamaLLM(
         model="gemma3",
-        callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]),
+        callbacks=[StreamingStdOutCallbackHandler()],
         verbose=True,
     )
     
