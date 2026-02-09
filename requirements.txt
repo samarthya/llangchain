@@ -20,7 +20,7 @@ langchain==0.3.27
 langchain-community==0.3.29
 langchain-core==0.3.75
 langchain-text-splitters==0.3.11
-langsmith==0.4.21
+langsmith==0.6.3
 marshmallow==3.26.1
 multidict==6.6.4
 mypy_extensions==1.1.0
